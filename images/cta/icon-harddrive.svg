@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <!-- Drive body -->
+  <rect x="8" y="12" width="32" height="24" rx="5" stroke="#1A73E8" stroke-width="2.5" fill="none"/>
+  <!-- Bottom stripe -->
+  <line x1="8" y1="30" x2="40" y2="30" stroke="#1A73E8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Indicator dot -->
+  <circle cx="34" cy="34" r="2" fill="#1A73E8"/>
+  <!-- Connector port lines on top -->
+  <line x1="16" y1="18" x2="26" y2="18" stroke="#1A73E8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="16" y1="23" x2="22" y2="23" stroke="#1A73E8" stroke-width="2" stroke-linecap="round"/>
+</svg>

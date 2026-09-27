@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="CSS/fonts.css">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="shortcut icon" href="images/favicon-icon.ico" type="image/x-icon">
+  <title>Signal Studio</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-inner">
+            <a class="header__logo logo" href="#">
+              <img src="images/Logo.svg" alt="Logo">
+            </a>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#Waveforms">Генератор</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#Spectre">Анализатор</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#Real-time">Реальное время</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#Book">Учебник</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__nav-btn">
+              <a download class="download-btn" href="downloads/Signal Studio.exe">Скачать EXE (бесплатно)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__body">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <h1 class="header__title">Генератор сигналов, осциллограф и спектральный анализатор в одном окне</h1>
+              <p class="header__subtitle">Работай с сигналами без сложных настроек. Всё необходимое для тестирования и
+                анализа — синус, меандр, FFT, фильтры Баттерворта, захват с микрофона и работа с WAV. Собрано в единый
+                EXE-файл без установки Python.</p>
+              <div class="content__buttons">
+                <div class="header__nav-btn">
+                  <a download class="download-btn" href="downloads/Signal Studio.exe">Скачать для Windows (EXE)</a>
+                </div>
+                <a class="button-video" href="#" data-fancybox>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_50)">
+                      <path d="M3.33334 2L12.6667 8L3.33334 14V2Z" stroke="#1A1A2E" stroke-width="1.66667" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3_50">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Смотреть видеообзор
+                </a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="header-image-wrapper">
+                <img class="header-image" src="images/bg-wave.svg" alt="">
+                <div class="header-values">
+                  <div class="header-values-item">
+                    <p class="value-item-title">Частота</p>
+                    <p class="value-item-subtitle">1000 Hz</p>
+                  </div>
+                  <div class="header-values-item">
+                    <p class="value-item-title">Амплитуда</p>
+                    <p class="value-item-subtitle">3.3 V</p>
+                  </div>
+                  <div class="header-values-item">
+                    <p class="value-item-title">Форма</p>
+                    <p class="value-item-subtitle">Синус</p>
+                  </div>
+                </div>
+              </div>
+              <div class="header-value-list">
+                <div class="value-list-item">
+                  <img class="value-item-img" src="images/wave-icon.svg" alt="">
+                  <p class="value-list-text">7 форм волн</p>
+                </div>
+                <div class="value-list-item">
+                  <img class="value-item-img" src="images/spectre.svg" alt="">
+                  <p class="value-list-text">FFT-спектр</p>
+                </div>
+                <div class="value-list-item">
+                  <img class="value-item-img" src="images/filter.svg" alt="">
+                  <p class="value-list-text">Фильтры Баттерворта</p>
+                </div>
+                <div class="value-list-item">
+                  <img class="value-item-img" src="images/music-icon.svg" alt="">
+                  <p class="value-list-text">WAV 32 бит</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__heading heading">
+              <h2 class="heading__title">Посмотри, как Signal Studio упрощает работу с сигналами</h2>
+              <p class="heading__subtitle">1 минута — и ты поймёшь весь функционал</p>
+            </div>
+            <div class="video__wrapper">
+              <div class="video__wrapper-list">
+                <div class="video__wrapper-item">
+                  <p class="video-item-subtitle">Временная область</p>
+                  <p class="video-item-title">Осциллограф</p>
+                </div>
+                <div class="video__wrapper-item">
+                  <p class="video-item-subtitle">FFT-спектр</p>
+                  <p class="video-item-title">Частотная область</p>
+                </div>
+                <div class="video__wrapper-item">
+                  <p class="video-item-subtitle">Спектрограмма</p>
+                  <p class="video-item-title">Время/частота</p>
+                </div>
+              </div>
+              <a class="video-button" href="videos/signal-studio.mp4" data-fancybox>
+                <img class="video-poster" src="images/prewiev_blue.jpg" alt="Video poster" width="100%" height="100%">
+                <img class="video-button-play" src="images/about/Background.svg" alt="">
+              </a>
+            </div>
+            <div class="about__adviсe">
+              <div class="advice__list">
+                <div class="advice__list-item">
+                  <div class="icon-bg">
+                    <img src="images/wave-icon.svg" alt="">
+                  </div>
+                  <p class="advice-item-title">1. Выбери форму волны</p>
+                  <p class="advice-item-subtitle">Синус, меандр, пила, треугольник, шум, импульс или произвольный сигнал
+                  </p>
+                </div>
+                <div class="advice__list-item">
+                  <div class="icon-bg">
+                    <img src="images/about/parameters.svg" alt="">
+                  </div>
+                  <p class="advice-item-title">2. Настрой параметры</p>
+                  <p class="advice-item-subtitle">Частота, амплитуда, смещение, фаза — интуитивный интерфейс</p>
+                </div>
+                <div class="advice__list-item">
+                  <div class="icon-bg">
+                    <img src="images/about/anlz.svg" alt="">
+                  </div>
+                  <p class="advice-item-title">3. Анализируй результат</p>
+                  <p class="advice-item-subtitle">Осциллограф, FFT, спектрограмма — всё в реальном времени</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="waveforms" id="Waveforms">
+        <div class="container">
+          <div class="waveforms__inner">
+            <h2 class="heading__title">7 базовых форм для любых задач</h2>
+            <p class="heading__subtitle">Частота от 0.1 Гц до 20 кГц, регулировка амплитуды, смещения и фазы</p>
+            <div class="waveforms__grid">
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/sinus.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Синус</p>
+              </div>
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/meandr.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Меандр</p>
+              </div>
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/saw.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Пила</p>
+              </div>
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/trn.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Треугольник</p>
+              </div>
+            </div>
+            <div class="waveforms__grid waveforms__grid--center">
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/noise.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Шум</p>
+              </div>
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/impulse.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Импульс</p>
+              </div>
+              <div class="waveforms__grid-item">
+                <div class="waveforms__grid-bg">
+                  <img src="images/waveforms/rectangle.svg" alt="">
+                </div>
+                <p class="waveforms-grid-text">Произвольный</p>
+              </div>
+            </div>
+            <div class="oscilloscope__wrapper">
+              <div class="oscilloscope__wrapper-buttons">
+                <div class="form__wave">
+                  <span>Форма волны: Синус → Меандр → Пила</span>
+                </div>
+                <a class="wave-switch-link" href="#">
+                  <span>Переключение в реальном времени</span>
+                </a>
+              </div>
+              <div class="oscilloscope__waves">
+                <a class="oscilloscope-waveform-item">
+                  <svg class="wave-svg" width="362" height="143" viewBox="0 0 362 143" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path
+                      d="M0 71.1682C21.8333 71.1682 33.1867 1.16821 65.5 1.16821C97.8133 1.16821 109.167 141.168 131 141.168C152.833 141.168 164.187 1.16821 196.5 1.16821C228.813 1.16821 240.167 141.168 262 141.168C283.833 141.168 295.187 1.16821 327.5 1.16821C359.813 1.16821 371.167 71.1682 349.333 71.1682"
+                      stroke="#0066FF" stroke-width="2.33631" />
+                  </svg>
+                </a>
+                <a class="oscilloscope-waveform-item">
+                  <svg class="wave-svg" width="246" height="133" viewBox="0 0 246 133" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path
+                      d="M0 66.1682H26.2V1.16821H69.8667V131.168H113.533V1.16821H157.2V131.168H200.867V1.16821H244.533V66.1682"
+                      stroke="#0066FF" stroke-width="2.33631" />
+                  </svg>
+                </a>
+                <a class="oscilloscope-waveform-item">
+                  <svg class="wave-svg" width="404" height="138" viewBox="0 0 404 138" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path
+                      d="M0.969666 68.8337L44.6363 3.83374V133.834L97.0363 3.83374V133.834L149.436 3.83374V133.834L201.836 3.83374V133.834L254.236 3.83374V133.834L306.636 3.83374V133.834L359.036 3.83374V133.834L402.703 68.8337"
+                      stroke="#00CC88" stroke-width="2.33631" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="oscilloscope">
+        <div class="container">
+          <div class="oscilloscope__inner">
+            <div class="oscilloscope__heading heading">
+              <h2 class="heading__title">Точные измерения двумя курсорами</h2>
+              <p class="heading__subtitle">Перетаскивай курсоры мышкой — измерения меняются в реальном времени</p>
+            </div>
+            <div class="oscilloscope__content">
+              <div class="oscilloscope__content-left">
+                <div class="header-image-wrapper header-image-wrapper--oscilloscope-boximg">
+                  <img class="header-image header-image--img" src="images/oscilloscope/SVG.svg" alt="">
+                  <div class="oscilloscope-boximg-value">
+                    <p class="oscilloscope-boximg-text">⊹ Перетаскивай курсоры</p>
+                  </div>
+                </div>
+                <p class="oscilloscope-left-text">Перетаскивай курсоры мышкой — измерения меняются в реальном времени
+                </p>
+              </div>
+              <div class="oscilloscope__content-right">
+                <div class="oscilloscope-values">
+                  <p class="oscilloscope-values-text">Измерения в реальном времени</p>
+                  <div class="oscilloscope-values-item">
+                    <p class="oscilloscope-values-title">Vpp (размах)</p>
+                    <p class="oscilloscope-values-subtitle oscilloscope-values-subtitle--blue">3.24 В</p>
+                  </div>
+                  <div class="oscilloscope-values-item">
+                    <p class="oscilloscope-values-title">Freq (частота)</p>
+                    <p class="oscilloscope-values-subtitle oscilloscope-values-subtitle--green">1000 Гц</p>
+                  </div>
+                  <div class="oscilloscope-values-item">
+                    <p class="oscilloscope-values-title">T (период)</p>
+                    <p class="oscilloscope-values-subtitle oscilloscope-values-subtitle--blue">1.00 мс</p>
+                  </div>
+                  <div class="oscilloscope-values-item">
+                    <p class="oscilloscope-values-title">Δt (разница времени)</p>
+                    <p class="oscilloscope-values-subtitle oscilloscope-values-subtitle--violet">0.25 мс</p>
+                  </div>
+                  <div class="oscilloscope-values-item">
+                    <p class="oscilloscope-values-title">ΔV (разница напряжения)</p>
+                    <p class="oscilloscope-values-subtitle oscilloscope-values-subtitle--orange">1.62 В</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="spectre" id="Spectre">
+        <div class="container">
+          <div class="spectre__inner">
+            <div class="spectre__heading heading">
+              <h2 class="heading__title">Анализируй спектр в деталях</h2>
+              <p class="heading__subtitle">FFT-анализ с настраиваемыми оконными функциями и спектрограмма</p>
+            </div>
+            <div class="spectre__grid">
+              <div class="spectre__list-item">
+                <div class="spectre-item-heading">
+                  <div class="icon-bg">
+                    <img src="images/fft/1.svg" alt="">
+                  </div>
+                  <p class="spectre-item-title">FFT-спектр</p>
+                </div>
+                <img class="spectre-item-image" src="images/fft/fft-spectre-new2.jpg" alt="">
+                <div class="spectre-boximg-value">
+                  <p class="spectre-boximg-text">Синусоидальный сигнал</p>
+                </div>
+                <p class="spectre-item-subtitle">Спектр в дБ с выбором окна: <span
+                    class="spectre-item-subtitle spectre-item-subtitle--blue">Hann, Hamming, Blackman, Kaiser</span></p>
+              </div>
+              <div class="spectre__list-item">
+                <div class="spectre-item-heading">
+                  <div class="icon-bg icon-bg--green">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_3_444)">
+                        <path d="M17.25 4.5L10.125 11.625L6.375 7.875L0.75 13.5" stroke="#00CC88" stroke-width="1.5" />
+                        <path d="M12.75 4.5H17.25V9" stroke="#00CC88" stroke-width="1.5" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3_444">
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="spectre-item-title">Спектрограмма</p>
+                </div>
+                <img class="spectre-item-image" src="images/fft/spectogram-new.jpg" alt="">
+                <img class="spectre-spectogram-img" src="images/fft/COLORBAR — absolute, styled.svg" alt="">
+                <div class="spectre-boximg-value">
+                  <p class="spectre-boximg-text">Пилообразный сигнал</p>
+                </div>
+                <p class="spectre-item-subtitle">Спектрограмма с настройкой <span
+                    class="spectre-item-subtitle spectre-item-subtitle--green">nperseg 4096</span> </p>
+              </div>
+            </div>
+            <div class="spectre-info"><span class="spectre-item-subtitle--blue">Больше nperseg</span> → выше частотное
+              разрешение. <span class="spectre-item-subtitle--green">Меньше</span> → лучше временное</div>
+          </div>
+        </div>
+      </section>
+      <section class="filters">
+        <div class="container">
+          <div class="filters__inner">
+            <div class="filters__heading heading">
+              <h2 class="heading__title">Очищай сигнал от шумов</h2>
+              <p class="heading__subtitle">Фильтры Баттерворта с настраиваемым порядком и частотой среза</p>
+            </div>
+            <div class="filters__grid">
+              <div class="filters__grid-item">
+                <div class="icon-bg">
+                  <img src="images/filters/fnch.svg" alt="">
+                </div>
+                <p class="filters-item-title">ФНЧ</p>
+                <p class="filters-item-titlemin">Фильтр низких частот</p>
+                <p class="filters-item-titlemax">Пропускает низкие, срезает высокие</p>
+              </div>
+              <div class="filters__grid-item">
+                <div class="icon-bg icon-bg--green">
+                  <img src="images/filters/fvch.svg" alt="">
+                </div>
+                <p class="filters-item-title">ФВЧ</p>
+                <p class="filters-item-titlemin">Фильтр высоких частот</p>
+                <p class="filters-item-titlemax">Пропускает высокие, убирает низкие</p>
+              </div>
+              <div class="filters__grid-item">
+                <div class="icon-bg icon-bg--purple">
+                  <img src="images/filters/pls.svg" alt="">
+                </div>
+                <p class="filters-item-title">Полосовой</p>
+                <p class="filters-item-titlemin">Полосовой фильтр</p>
+                <p class="filters-item-titlemax">Выделяет полосу частот</p>
+              </div>
+            </div>
+            <div class="filters-info">Порядок фильтра 1–10.<span class="filters-item-subtitle--blue">Чем выше порядок,
+                тем круче срез</span> </div>
+            <div class="filter__graphic">
+              <div class="filter__graphics">
+                <div class="filter__graphics-item">
+                  <div class="graphics-item graphics-item--red"><span>До фильтрации (зашумлённый сигнал)</span></div>
+                  <div class="wrapper-filter-boximg">
+                    <img class="header-image--img" src="images/filters/Vector.svg" alt="">
+                  </div>
+                </div>
+                <div class="filter__graphics-item">
+                  <div class="graphics-item"><span>После фильтрации (чистый сигнал)</span></div>
+                  <div class="wrapper-filter-boximg">
+                    <img class="header-image--img" src="images/filters/Group 1.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="filter__graphics-values">
+                <div class="filter__graphics-value">
+                  <div class="graphics-value-title">Частота среза</div>
+                  <div class="graphics-value-subtitle">100 Гц – 10 кГц</div>
+                </div>
+                <div class="filter__graphics-value">
+                  <div class="graphics-value-title">Порядок фильтра</div>
+                  <div class="graphics-value-subtitle">1 – 10</div>
+                </div>
+                <div class="filter__graphics-value">
+                  <div class="graphics-value-title">Крутизна среза</div>
+                  <div class="graphics-value-subtitle">-20N дБ/дек</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="real-time" id="Real-time">
+        <div class="container">
+          <div class="real-time__inner">
+            <div class="real-time__heading heading">
+              <h2 class="heading__title">Загружай, обрабатывай, сохраняй. Или работай в реальном времени</h2>
+              <p class="heading__subtitle">Полная поддержка WAV-файлов и захват аудио с микрофона</p>
+            </div>
+            <div class="real-time-grid">
+              <div class="realtime-grid-item">
+                <div class="realtime-item-heading">
+                  <div class="icon-bg">
+                    <img src="images/realtime/sun.svg" alt="">
+                  </div>
+                  <p class="realtime-item-title">Анализатор WAV</p>
+                </div>
+                <div class="realtime-item-buttons">
+                  <a href="#" class="realtime-btn">8/16</a>
+                  <a href="#" class="realtime-btn">24</a>
+                  <a href="#" class="realtime-btn realtime-btn--blue ">32</a>
+                  <a href="#" class="realtime-btn">бит</a>
+                </div>
+                <div class="realtime-item-buttons">
+                  <a href="#" class="realtime-btn realtime-btn--blue">Моно</a>
+                  <a href="#" class="realtime-btn">Стерео</a>
+                </div>
+                <img class="realtime-image" src="images/realtime/wv.jpg" alt="">
+                <p class="realtime-grid-text">Открывай любые WAV, выбирай канал (Левый/Правый/Оба), применяй фильтры,
+                  сохраняй результат</p>
+                <div class="realt-twobtns">
+                  <a href="#" class="realt-twobtn realt-twobtn--blue">Открыть WAV</a>
+                  <a href="#" class="realt-twobtn realt-twobtn--default">Сохранить</a>
+                </div>
+              </div>
+              <div class="realtime-grid-item realtime-grid-item--special ">
+                <div class="realtime-item-heading">
+                  <div class="icon-bg icon-bg--green">
+                    <img src="images/realtime/micro.svg" alt="">
+                  </div>
+                  <p class="realtime-item-title">Захват с микрофона</p>
+                </div>
+                <div class="realtime-boximg">
+                  <img class="realtime-box-image" src="images/realtime/rt.svg" alt="">
+                  <p class="realtime-boximg-title">Режим реального времени</p>
+                  <p class="realtime-boximg-subtitle">Запись идёт...</p>
+                </div>
+                <div class="realtime-values">
+                  <div class="realtime-values-text">
+                    <p>Буфер</p>
+                    <p class="realtime-values-textgreen">5 секунд</p>
+                  </div>
+                  <div class="realtime-values-text">
+                    <p>Обновление</p>
+                    <p class="realtime-values-textgreen">50 мс</p>
+                  </div>
+                  <div class="realtime-values-text">
+                    <p>Частота дискретизации</p>
+                    <p class="realtime-values-textgreen">44.1 кГц</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="book" id="Book">
+        <div class="container">
+          <div class="book__inner">
+            <div class="book__heading heading">
+              <div class="icon-bg-big icon-bg--fullblue">
+                <img class="book-icon" src="images/tutorial/graduation-cap-svgrepo-com.svg" alt="">
+              </div>
+              <h2 class="heading__title">Для студентов и начинающих</h2>
+              <p class="heading__subtitle">Встроенный учебник по работе с сигналами</p>
+            </div>
+            <div class="book__grid">
+              <div class="book__grid-item-big">
+                <div class="book__grid-item-bigheading">
+                  <div class="icon-bg-min icon-bg--shadow">
+                    <img class="" src="images/tutorial/book.svg" alt="">
+                  </div>
+                  <div class="book__grid-item-title">
+                    <p class="book-grid-title">Теория + Практика</p>
+                    <p class="book-grid-subtitle">Простым языком</p>
+                  </div>
+                </div>
+                <p class="book__grid-text">Теорема Котельникова, фильтры Баттерворта, оконные функции — всё объяснено простым языком с примерами и графиками.</p>
+                <div class="book__grid-info">
+                  <p>Нажми <span class="book__grid-info-circle">Ctrl+4</span> , чтобы открыть справочник</p>
+                </div>
+              </div>
+              <div class="book__grid-item">
+                <div class="icon-bg icon-bg--shadow">
+                  <img class="" src="images/tutorial/analytics-graph-svgrepo-com.svg" alt="">
+                </div>
+                <p class="book-grid-title">Теорема Котельникова</p>
+                <p class="book-grid-subtitle">Почему частота дискретизации должна быть минимум в 2 раза выше максимальной частоты сигнала</p>
+              </div>
+              <div class="book__grid-item">
+                <div class="icon-bg icon-bg--shadow">
+                  <img class="" src="images/tutorial/microscope-svgrepo-com.svg" alt="">
+                </div>
+                <p class="book-grid-title">Фильтры Баттерворта</p>
+                <p class="book-grid-subtitle">Как работают ФНЧ, ФВЧ и полосовые фильтры. Что такое порядок фильтра и частота среза</p>
+              </div>
+              <div class="book__grid-item">
+                <div class="icon-bg icon-bg--shadow">
+                  <img class="" src="images/tutorial/triangular-ruler-noto.svg" alt="">
+                </div>
+                <p class="book-grid-title">Оконные функции</p>
+                <p class="book-grid-subtitle">Зачем нужны окна Хэмминга, Хэнна, Блэкмана. Как они влияют на FFT-анализ</p>
+              </div>
+              <div class="book__grid-item">
+                <div class="icon-bg icon-bg--shadow">
+                  <img class="" src="images/tutorial/artist-palette-svgrepo-com.svg" alt="">
+                </div>
+                <p class="book-grid-title">Спектрограмма</p>
+                <p class="book-grid-subtitle">Как читать спектрограмму. Что показывает временная и частотная оси</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hotkeys">
+        <div class="container">
+          <div class="hotkeys__inner">
+            <div class="hotkeys__heading heading">
+              <div class="hotkeys__icon-bg-big">
+                <img class="" src="images/hotkeys/logo.svg" alt="">
+              </div>
+              <h2 class="heading__title">Управляй одной рукой</h2>
+              <p class="heading__subtitle">Быстрый доступ ко всем режимам через горячие клавиши</p>
+            </div>
+            <div class="hotkeys__grid">
+              <div class="hotkeys__grid-item hotkeys__grid-item--blue">
+                <div class="hotkeys__grid-item-heading">
+                  <div class="icon-bg-hk icon-bg--shadow">
+                    <img class="hotkeys-grid-img" src="images/hotkeys/musical-note-music-and-multimedia-svgrepo-com.svg" alt="">
+                  </div>
+                    <div class="hotkeys-item-title"><p class="hotkeys-grid-title">Ctrl+1</p></div>
+                </div>
+                <span class="hotkeys-grid-text">Генератор сигналов</span>
+              </div>
+              <div class="hotkeys__grid-item hotkeys__grid-item--mint">
+                <div class="hotkeys__grid-item-heading">
+                  <div class="icon-bg-hk icon-bg--shadow">
+                    <img class="hotkeys-grid-img" src="images/hotkeys/file-document-svgrepo-com.svg" alt="">
+                  </div>
+                    <div class="hotkeys-item-title"><p class="hotkeys-grid-title">Ctrl+2</p></div>
+                </div>
+                <span class="hotkeys-grid-text">Анализатор WAV</span>
+              </div>
+              <div class="hotkeys__grid-item hotkeys__grid-item--lavender">
+                <div class="hotkeys__grid-item-heading">
+                  <div class="icon-bg-hk icon-bg--shadow">
+                    <img class="hotkeys-grid-img" src="images/hotkeys/microphone-sing-svgrepo-com.svg" alt="">
+                  </div>
+                    <div class="hotkeys-item-title"><p class="hotkeys-grid-title">Ctrl+3</p></div>
+                </div>
+                <span class="hotkeys-grid-text">Реальное время (микрофон)</span>
+              </div>
+              <div class="hotkeys__grid-item hotkeys__grid-item--peach">
+                <div class="hotkeys__grid-item-heading">
+                  <div class="icon-bg-hk icon-bg--shadow">
+                    <img class="hotkeys-grid-img" src="images/hotkeys/books-svgrepo-com.svg" alt="">
+                  </div>
+                  <div class="hotkeys-item-title">  
+                    <p class="hotkeys-grid-title">Ctrl+4</p>
+                  </div>
+                </div>
+                <span class="hotkeys-grid-text">Учебный раздел</span>
+              </div>
+              <div class="hotkeys__grid-item hotkeys__grid-item--slate">
+                <div class="hotkeys__grid-item-heading">
+                  <div class="icon-bg-hk icon-bg--shadow">
+                    <img class="hotkeys-grid-img" src="images/hotkeys/recalculate.svg" alt="">
+                  </div>
+                    <div class="hotkeys-item-title"><p class="hotkeys-grid-title">F5</p></div>
+                </div>
+                <span class="hotkeys-grid-text">Пересчет</span>
+              </div>
+              <div class="hotkeys__grid-item hotkeys__grid-item--purple">
+                <div class="hotkeys__grid-item-heading">
+                  <div class="icon-bg-hk icon-bg--shadow">
+                    <img class="hotkeys-grid-img" src="images/hotkeys/information-svgrepo-com.svg" alt="">
+                  </div>
+                    <div class="hotkeys-item-title">
+                      <p class="hotkeys-grid-title">F1</p>
+                    </div>
+                </div>
+                <span class="hotkeys-grid-text">О программе</span>
+              </div>
+            </div>
+            <div class="hotkeys-info">
+              <div class="icon-bg">
+                    <img src="images/hotkeys/information2.svg" alt="">
+                  </div>
+                  <div class="hotkeys-more-info">
+                    <p class="hotkeys-item-title">Дополнительные комбинации</p>
+                    <p class="hotkeys-item-subtitle"><span class="hotkeys-btn">Ctrl+S</span>Сохранить результат<span class="hotkeys-btn">Ctrl+0</span>Открыть WAV-файл<span class="hotkeys-btn">Space</span>Старт/Стоп генерации<span class="hotkeys-btn">Esc</span>Закрыть модальное окно</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="container">
+          <div class="cta__inner">
+            <div class="cta__heading heading">
+              <h2 class="heading__title heading__title--white">Начни работать за 1 минуту</h2>
+              <p class="heading__subtitle heading__subtitle--white">Никакого Python, никаких библиотек. Готовый EXE-файл.</p>
+            </div>
+            <div class="cta__wrapper">
+              <a download class="download-btn download-btn--last" href="downloads/Signal Studio.exe">Скачать Signal Studio (бесплатно)</a>
+              <ul class="details-list">
+                <li class="details-item">
+                  <p>Без установки Python</p>
+                </li>
+                <li class="details-item">
+                  <p>Готовый EXE-файл</p>
+                </li>
+                <li class="details-item">
+                  <p>Все библиотеки включены</p>
+                </li>
+                <li class="details-item">
+                  <p>Запуск в один клик</p>
+                </li>
+              </ul>
+              <div class="features">
+                <div class="features-item">
+                  <img src="images/cta/icon-monitor.svg" alt="">
+                  <p class="features-item-text">Windows 10/11</p>
+                </div>
+                <div class="features-item">
+                  <img src="images/cta/icon-harddrive.svg" alt="">
+                  <p class="features-item-text">~80 МБ</p>
+                </div>
+                <div class="features-item">
+                  <img src="images/cta/icon-checkmark.svg" alt="">
+                  <p class="features-item-text">Версия 1.0</p>
+                </div>
+              </div>
+            </div>
+            <div class="cta-text">Системные требования: Windows 10 (64-bit) или новее, 4 ГБ RAM</div>
+            <!-- <div class="cta__decor">
+              <img src="images/decor/big-circle.svg" alt="">
+              <img src="images/decor/circle.svg" alt="">
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__content">
+            <div class="footer__content-left">
+              <img src="images/footer/fr-logo.svg" alt="">
+              <p class="app-info">Профессиональный инструмент для генерации сигналов, спектрального анализа и работы с WAV-файлами</p>
+              <p class="app-audience">Signal Studio 2025. Для радиолюбителей, инженеров и студентов.</p>
+            </div>
+            <div class="footer__content-right">
+              <ul class="app-resources">
+                <p class="resources-title">Ресурсы</p>
+                <li class="resource">
+                  <a class="footer-link footer-link--mail" href="mailto:support@signalstudio.com?subject=Signal Studio Support">Обратная связь</a>
+                </li>
+                <li class="resource">
+                  <a download class="footer-link footer-link--read" href="downloads/README.pdf">Документация</a>
+                </li>
+              </ul>
+              <ul class="app-possibilities">
+                <p class="possibilities-title">Возможности</p>
+                <li class="possibilitie">
+                  <a class="footer-link" href="#Waveforms">7 форм волн</a>
+                </li>
+                <li class="possibilitie">
+                  <a class="footer-link" href="#Spectre">FFT-анализ</a>
+                </li>
+                <li class="possibilitie">
+                  <a class="footer-link" href="#Book">Фильтры Баттерворта</a>
+                </li>
+                <li class="possibilitie">
+                  <a class="footer-link" href="#Real-time">Работа с WAV</a>
+                </li>
+                <li class="possibilitie">
+                  <a class="footer-link" href="#Real-time">Реальное время</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Signal Studio. Все права защищены.</p>
+            <div class="user-agreement">
+              <p class="user-agreement-text">Условия использования</p>
+              <p class="user-agreement-text">Конфиденциальность</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
